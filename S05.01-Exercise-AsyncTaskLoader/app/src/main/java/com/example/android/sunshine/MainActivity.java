@@ -107,6 +107,10 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
 
         // DONE (7) Remove the code for the AsyncTask and initialize the AsyncTaskLoader
         /* Once all of our views are setup, we can load the weather data. */
+
+        Bundle bundleForLoader = null;
+        MainActivity callback = this;
+        getSupportLoaderManager().initLoader(FORECAST_LOADER_ID, bundleForLoader, callback);
     }
 
 
